@@ -1,0 +1,39 @@
+uuid: 297471bf-d92f-4f99-bfee-45906c20c294
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.new
+  module:
+    - panels
+    - user
+id: new-panels_variant-0
+label: Panels
+weight: 0
+variant: panels_variant
+variant_settings:
+  id: panels_variant
+  label: null
+  weight: 0
+  uuid: 7edc4edf-c2af-4a23-9325-75d9c2d5c599
+  blocks:
+    eaddd623-c560-4b69-a779-c53b83b7c22e:
+      id: user_login_block
+      label: 'User login'
+      label_display: visible
+      provider: user
+      context_mapping: {  }
+      region: content
+      weight: 0
+      uuid: eaddd623-c560-4b69-a779-c53b83b7c22e
+  page_title: ''
+  layout: layout_onecol
+  layout_settings:
+    label: ''
+  builder: standard
+  storage_type: page_manager
+  storage_id: new-panels_variant-0
+page: new
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

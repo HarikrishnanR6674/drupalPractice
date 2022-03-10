@@ -1,0 +1,8 @@
+uuid: 7522b5d9-8fd6-4203-a9f1-91b6068f3065
+langcode: en
+status: true
+dependencies: {  }
+name: type
+vid: sports
+description: Catagorization
+weight: 0

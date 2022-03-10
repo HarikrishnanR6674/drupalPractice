@@ -1,0 +1,12 @@
+uuid: f27ff24d-c911-4755-a743-f6d8ad4c163b
+langcode: en
+status: true
+dependencies: {  }
+id: new
+label: new
+description: 'This is panel'
+use_admin_theme: false
+path: /panel
+access_logic: and
+access_conditions: {  }
+parameters: {  }

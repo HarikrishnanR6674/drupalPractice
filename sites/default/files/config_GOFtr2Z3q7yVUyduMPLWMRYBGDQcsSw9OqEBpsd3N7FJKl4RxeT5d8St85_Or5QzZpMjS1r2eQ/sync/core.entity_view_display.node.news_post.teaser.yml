@@ -1,0 +1,49 @@
+uuid: 107651ff-bc59-4d85-886b-2c32c46a1a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news_post.body
+    - field.field.node.news_post.field_news_author
+    - field.field.node.news_post.field_news_date
+    - field.field.node.news_post.field_news_image
+    - field.field.node.news_post.field_news_place
+    - field.field.node.news_post.field_type
+    - node.type.news_post
+  module:
+    - datetime
+    - text
+    - user
+id: node.news_post.teaser
+targetEntityType: node
+bundle: news_post
+mode: teaser
+content:
+  field_news_author:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_news_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_news_image: true
+  field_news_place: true
+  field_type: true
+  langcode: true

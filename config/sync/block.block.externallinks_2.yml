@@ -1,0 +1,25 @@
+uuid: 4f2acfdd-a4cb-46fb-bb1d-a4c0b2de83b5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ee5e8881-d877-4c61-918f-1c551229d166'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: externallinks_2
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:ee5e8881-d877-4c61-918f-1c551229d166'
+settings:
+  id: 'block_content:ee5e8881-d877-4c61-918f-1c551229d166'
+  label: 'External links'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 139d78dc-d564-45bc-ba63-58a1514b9b17
+name: 'Daily News'
+mail: harikrishnan.apty@gmail.com
+slogan: 'It''s worth daily'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

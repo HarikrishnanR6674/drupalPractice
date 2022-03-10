@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a mrcs social share formatter.
+ *
+ * Available variables:
+ * - share_services: Array of share services.
+ *   - id: Share service id.
+ *   - name: Name text.
+ *   - description: Description text.
+ *   - url: Service url.
+ *   - share_url: Share url.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'mrcs-social-share--share-services',
+  ]
+%}
+
+<ul{{ attributes.addClass(classes) }}>
+  {% for share_service in share_services %}
+    <li>
+      <a id="{{ 'share-service-' ~ share_service.id }}" class="share-service-link {{ 'share-service-' ~ share_service.id }}" target="_blank" href="{{ share_service.url }}" title="{{ share_service.name }}" rel="noopener noreferrer">
+        <span class="share-service-name">{{ share_service.name }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

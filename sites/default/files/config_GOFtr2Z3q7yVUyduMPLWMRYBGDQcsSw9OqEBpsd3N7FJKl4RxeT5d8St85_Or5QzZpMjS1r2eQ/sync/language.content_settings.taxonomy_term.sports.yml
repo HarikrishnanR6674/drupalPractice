@@ -1,0 +1,11 @@
+uuid: c6001d8f-6490-4987-8ed1-6b807f7794d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sports
+id: taxonomy_term.sports
+target_entity_type_id: taxonomy_term
+target_bundle: sports
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,20 @@
+uuid: 4c70841d-a843-4aef-b0f4-a2d8f13acd4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_restration_fees
+field_name: field_restration_fees
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

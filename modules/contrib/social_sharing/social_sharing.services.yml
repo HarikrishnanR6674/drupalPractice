@@ -1,0 +1,8 @@
+services:
+  plugin.manager.social_sharing.share_service:
+    class: Drupal\social_sharing\Plugin\ShareServiceManager
+    parent: default_plugin_manager
+
+  social_sharing.social_sharing_service:
+    class: Drupal\social_sharing\SocialSharingService
+    arguments: ['@entity_type.manager']

@@ -1,0 +1,19 @@
+uuid: 274e0955-70f1-4859-8600-6d463eca60d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_place
+    - node.type.news_post
+id: node.news_post.field_news_place
+field_name: field_news_place
+entity_type: node
+bundle: news_post
+label: Place
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

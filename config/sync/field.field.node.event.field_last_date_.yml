@@ -1,0 +1,21 @@
+uuid: 80e3869d-984e-4e47-a252-ba89d0d90691
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_date_
+    - node.type.event
+  module:
+    - datetime
+id: node.event.field_last_date_
+field_name: field_last_date_
+entity_type: node
+bundle: event
+label: 'Last date for Registration'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

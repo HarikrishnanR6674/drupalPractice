@@ -1,0 +1,107 @@
+<?php
+
+/**
+ * @file
+ * Contains social_sharing.module.
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function social_sharing_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the social_sharing module.
+    case 'help.page.social_sharing':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a sharing functionality for social services.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function social_sharing_theme($existing, $type, $theme, $path) {
+  return [
+    'social_sharing_share_services' => [
+      'variables' => [
+        'share_services' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function social_sharing_entity_extra_field_info() {
+  $extra = [];
+  $entityTypes = \Drupal::service('social_sharing.social_sharing_service')->getContentEntities();
+  $config = Drupal::config('social_sharing.settings');
+
+  // Allow modules to alter the entity types.
+  \Drupal::moduleHandler()->alter('social_sharing_entity_types', $entityTypes);
+
+  foreach ($entityTypes as $type) {
+    $entityTypeId = $type->id();
+    $isAllowed = $config->get("entities.{$entityTypeId}");
+    if ($isAllowed) {
+      $bundles = Drupal::service('entity_type.bundle.info')->getBundleInfo($entityTypeId);
+      foreach ($bundles as $bundle => $bundle_data) {
+        $extra[$entityTypeId][$bundle]['display']['social_sharing'] = [
+          'label' => t('Social sharing buttons'),
+          'description' => t('Social sharing buttons'),
+          'weight' => 5,
+          'visible' => FALSE,
+        ];
+      }
+    }
+  }
+
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function social_sharing_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($display->getComponent('social_sharing') && $social_sharing_data = social_sharing_create_data()) {
+    $build['social_sharing'] = [
+      '#theme' => 'social_sharing_share_services',
+      '#share_services' => $social_sharing_data,
+    ];
+  }
+}
+
+/**
+ * Generate data for Share services.
+ *
+ * @param null $config
+ *   If present this will be used as custom config data. Use NULL for default
+ *   config data.
+ *
+ * @return array
+ *   Generated share services.
+ */
+function social_sharing_create_data($config = NULL) {
+  if (is_null($config)) {
+    $config = \Drupal::config('social_sharing.settings');
+  }
+  $share_services = $config->get('share_services');
+  $available_share_services = [];
+  // Get services with the activated "enabled" attribute.
+  foreach ($share_services as $share_service_id => $share_service) {
+    if ($share_service['enabled'] == '1') {
+      $available_share_services[$share_service_id] = $share_service;
+    }
+  }
+
+  return \Drupal::service('plugin.manager.social_sharing.share_service')->getShareServicesWithValue($available_share_services);
+}

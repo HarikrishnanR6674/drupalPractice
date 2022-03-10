@@ -1,0 +1,35 @@
+uuid: ec20abb8-837b-4536-9d1b-9d8894823da1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.first_para.field_first
+    - field.field.paragraph.first_para.field_para_img
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.first_para
+  module:
+    - image
+id: paragraph.first_para.default
+targetEntityType: paragraph
+bundle: first_para
+mode: default
+content:
+  field_first:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_para_img:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

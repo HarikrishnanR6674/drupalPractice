@@ -1,0 +1,21 @@
+uuid: 9fba715d-47a0-4ced-bedc-7660ce19c165
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_author
+    - node.type.news_post
+  module:
+    - text
+id: node.news_post.field_news_author
+field_name: field_news_author
+entity_type: node
+bundle: news_post
+label: 'Author :'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

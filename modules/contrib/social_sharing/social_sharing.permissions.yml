@@ -1,0 +1,5 @@
+# Permissions for the social_sharing module
+'administer social sharing':
+  title: 'Administer Social sharing'
+  description: 'Perform administration tasks for the social_sharing module.'
+  restrict access: TRUE

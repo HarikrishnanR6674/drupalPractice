@@ -1,0 +1,7 @@
+social_sharing.admin_settings:
+  path: '/admin/config/services/social_sharing'
+  defaults:
+    _form: '\Drupal\social_sharing\Form\SocialSharingSettingsForm'
+    _title: 'Social Sharing'
+  requirements:
+    _permission: 'administer social sharing'

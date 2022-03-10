@@ -1,0 +1,11 @@
+name: 'Social sharing'
+type: module
+description: 'Provides a sharing functionality for social services.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Social'
+
+# Information added by Drupal.org packaging script on 2020-09-17
+version: '1.0.0-alpha1'
+project: 'social_sharing'
+datestamp: 1600343065

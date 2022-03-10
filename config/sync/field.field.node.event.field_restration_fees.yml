@@ -1,0 +1,23 @@
+uuid: 3bcd71d2-4e5b-4640-9fff-98fb3a39e1b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_restration_fees
+    - node.type.event
+id: node.event.field_restration_fees
+field_name: field_restration_fees
+entity_type: node
+bundle: event
+label: 'Registration Fees'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ₹
+  suffix: ''
+field_type: integer

@@ -1,0 +1,4 @@
+social_sharing.admin_settings_tab:
+  route_name: social_sharing.admin_settings
+  title: Social sharing settings
+  base_route: social_sharing.admin_settings

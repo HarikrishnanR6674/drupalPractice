@@ -1,0 +1,33 @@
+uuid: 4fdd8aa9-0c54-45a6-99d6-bfa2e9e9caa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.admission
+  module:
+    - node
+    - webform
+  theme:
+    - bartik
+id: webform_2
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: visible
+  provider: webform
+  webform_id: admission
+  default_data: ''
+  redirect: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article

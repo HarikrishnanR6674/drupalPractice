@@ -1,0 +1,8 @@
+uuid: 3a44b71d-ab84-4305-8e4c-fcfc283cc99e
+langcode: en
+status: true
+dependencies: {  }
+id: date
+label: Date
+locked: false
+pattern: r

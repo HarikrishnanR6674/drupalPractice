@@ -1,0 +1,25 @@
+uuid: 31c3b74e-d66a-40fe-bd22-9f1d70dbe05a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ee5e8881-d877-4c61-918f-1c551229d166'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: externallinks
+theme: bartik
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:ee5e8881-d877-4c61-918f-1c551229d166'
+settings:
+  id: 'block_content:ee5e8881-d877-4c61-918f-1c551229d166'
+  label: 'External links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

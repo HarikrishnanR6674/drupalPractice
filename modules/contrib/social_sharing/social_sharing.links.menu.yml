@@ -1,0 +1,5 @@
+social_sharing.admin_settings:
+  title: 'Social sharing'
+  parent: system.admin_config_services
+  description: 'Configure social sharing buttons.'
+  route_name: social_sharing.admin_settings

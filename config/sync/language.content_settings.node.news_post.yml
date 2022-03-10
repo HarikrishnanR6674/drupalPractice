@@ -1,0 +1,16 @@
+uuid: a28e0cda-da55-46a8-a265-a0089e7be2bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news_post
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.news_post
+target_entity_type_id: node
+target_bundle: news_post
+default_langcode: site_default
+language_alterable: false

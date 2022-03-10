@@ -1,0 +1,19 @@
+uuid: 469c7f52-0881-4b31-a8e9-13e83eb2eeeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_first
+    - paragraphs.paragraphs_type.first_para
+id: paragraph.first_para.field_first
+field_name: field_first
+entity_type: paragraph
+bundle: first_para
+label: first-txt
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

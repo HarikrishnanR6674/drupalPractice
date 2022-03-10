@@ -1,0 +1,33 @@
+uuid: 94c25de7-8e0b-4bb7-8d1b-4860df7011be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.first_para.field_first
+    - field.field.paragraph.first_para.field_para_img
+    - paragraphs.paragraphs_type.first_para
+  module:
+    - image
+id: paragraph.first_para.default
+targetEntityType: paragraph
+bundle: first_para
+mode: default
+content:
+  field_first:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_para_img:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

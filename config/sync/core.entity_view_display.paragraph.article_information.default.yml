@@ -1,0 +1,33 @@
+uuid: 228f0b86-8c20-4a5e-b13a-a4f2e69d2bbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_information.field_information
+    - field.field.paragraph.article_information.field_informt
+    - paragraphs.paragraphs_type.article_information
+  module:
+    - image
+id: paragraph.article_information.default
+targetEntityType: paragraph
+bundle: article_information
+mode: default
+content:
+  field_information:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_informt:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

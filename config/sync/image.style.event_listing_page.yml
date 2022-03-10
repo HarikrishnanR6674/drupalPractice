@@ -1,0 +1,14 @@
+uuid: 153d4fbb-6fe1-456d-9b83-8a6a59f066dc
+langcode: en
+status: true
+dependencies: {  }
+name: event_listing_page
+label: 'Event Listing Page'
+effects:
+  7576ec78-43e4-4ec4-84fc-106ec5100d5d:
+    uuid: 7576ec78-43e4-4ec4-84fc-106ec5100d5d
+    id: image_resize
+    weight: 1
+    data:
+      width: 120
+      height: 120
